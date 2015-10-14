@@ -5,8 +5,8 @@ import processing.net.*;
 Client client;
 
 void setup(){
-  // mel code: commandPort -n "localhost: 12344";
-  client = new Client(this, "127.0.0.1", 12344);
+  // mel code: commandPort -n "localhost: 4000";
+  client = new Client(this, "127.0.0.1", 4000);
   client.write("sphere -n \"new_sphere\";\n");
 }
 

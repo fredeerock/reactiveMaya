@@ -1,4 +1,4 @@
-// Processing - Kinect 1
+// reactiveMaya Kinect
 
 // 0. Click spotlight. Type "Terminal". Then Enter.
 // 1. Install Homebrew by pasting this into terminal followed by enter: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"

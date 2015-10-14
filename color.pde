@@ -1,4 +1,4 @@
-Processing Code - Color Tracking:
+// reactiveMaya Color Tracking
 
 // Learning Processing
 // Daniel Shiffman

@@ -4,7 +4,7 @@
 1. Download Processing from http://processing.org
 2. In Maya enter the following in the MEL command bar at the bottom of the screen: 
 ```
-commandPort -n "localhost:4444";
+commandPort -n "localhost:4000";
 ```
 3. In your Processing sketch insert the following lines of code: 
 
@@ -15,7 +15,7 @@ commandPort -n "localhost:4444";
   ```
   Inside the setup function
   ```
-    client = new Client(this, "127.0.0.1", 4444);
+    client = new Client(this, "127.0.0.1", 4000);
   ```
   Then finally do something like the below code in your sketch putting what's in quotes the Maya command you want executed.
   ```
@@ -30,8 +30,8 @@ import processing.net.*;
 Client client;
 
 void setup(){
-  // mel code: commandPort -n "localhost: 12344";
-  client = new Client(this, "127.0.0.1", 12344);
+  // mel code: commandPort -n "localhost: 4000";
+  client = new Client(this, "127.0.0.1", 4000);
   client.write("sphere -n \"new_sphere\";\n");
 }
 

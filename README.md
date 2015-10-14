@@ -1,5 +1,5 @@
 # reactiveMaya
-A helpful little procedure for getting Processing and Maya talking to each other. Made with help from this post on processin.org: http://forum.processing.org/one/topic/processing-to-maya.html. 
+A helpful little procedure for getting Processing and Maya talking to each other.
 
 ### Getting Started:
 1. Download Processing from http://processing.org
@@ -20,11 +20,11 @@ commandPort -n "localhost:4000";
   ```
   Then finally do something like the below code in your sketch putting what's in quotes the Maya command you want executed.
   ```
-    client.write("sphere -n \"new_sphere\";\n");
+    client.write("CreatePolygonSphere;\n");
   ```
 
 ### Example:
-Processing code for simple mouse tracking sketch:
+Processing code for simple mouse tracking from http://forum.processing.org/one/topic/processing-to-maya.html:
 ```
 import processing.net.*;
 

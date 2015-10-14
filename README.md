@@ -16,7 +16,10 @@ commandPort -n "localhost:4444";
   Inside the setup function
   ```
     client = new Client(this, "127.0.0.1", 4444);
-    client.write("sphere -n \"new_sphere\";\n"); //Put in  quotes the MEL command you want executed in Maya
+  ```
+  Then finally do something like the below code in your sketch putting what's in quotes the Maya command you want executed.
+  ```
+    client.write("sphere -n \"new_sphere\";\n");
   ```
 
 ### Example:

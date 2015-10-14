@@ -1,4 +1,5 @@
 # reactiveMaya
+A helpful little procedure for getting Processing and Maya talking to each other. Made with help from this post on processin.org: http://forum.processing.org/one/topic/processing-to-maya.html. 
 
 ### Getting Started:
 1. Download Processing from http://processing.org

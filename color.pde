@@ -18,7 +18,7 @@ color trackColor;
 void setup() {
   size(320,240);
 
-  client = new Client(this, "127.0.0.1", 12344);
+  client = new Client(this, "127.0.0.1", 4000);
   video = new Capture(this,width,height,15);  
   video.start();
   

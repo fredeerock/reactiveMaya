@@ -49,6 +49,3 @@ void mouseMoved (){
 }
 ```
 ## Javascript
-1. Clone the p5.js serial repo: `git clone https://github.com/vanevery/p5.serialport`
-2. Install its dependencies with: `npm install`
-3. Start the server with: `node startserver.js`

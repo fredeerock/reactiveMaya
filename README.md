@@ -1,13 +1,15 @@
 # reactiveMaya
-A helpful little procedure for getting Processing and Maya talking to each other.
+A helpful little procedure for getting Processing and Maya talking to each other. Java and JavaScript instructions below.
+
+## Java
 
 ### Getting Started:
 1. Download Processing from http://processing.org
-2. In Maya enter the following in the MEL command bar at the bottom of the screen: 
+2. In Maya enter the following in the MEL command bar at the bottom of the screen:
 ```
 commandPort -n "localhost:4000";
 ```
-3. In your Processing sketch insert the following lines of code: 
+3. In your Processing sketch insert the following lines of code:
 
   Before the setup function:
   ```
@@ -23,7 +25,7 @@ commandPort -n "localhost:4000";
     client.write("CreatePolygonSphere;\n");
   ```
 
-### Example:
+### Java Example:
 Processing code for simple mouse tracking from http://forum.processing.org/one/topic/processing-to-maya.html:
 ```
 import processing.net.*;
@@ -46,4 +48,7 @@ void mouseMoved (){
   println(x+" "+y);
 }
 ```
-
+## Javascript
+1. Clone the p5.js serial repo: `git clone https://github.com/vanevery/p5.serialport`
+2. Install its dependencies with: `npm install`
+3. Start the server with: `node startserver.js`

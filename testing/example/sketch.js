@@ -3,7 +3,7 @@ function setup() {
   background(204);
   wsl = new WsLib("127.0.0.1", 9999);
   // frameRate(20);
-  wsl.sendmsg("heeee");
+  wsl.sendmsg("sphere");
 
 
 

@@ -19,16 +19,8 @@
 // The Definitive Guide to HTML5 WebSocket
 
 var websocket = require("./wsserver");
-var repl = require("repl");
-
 var connections = Object.create(null);
-
-var remoteMultiEval = function(cmd, context, filename, callback) {
-    for (var c in connections) {
-        connections[c].send(cmd);
-    }
-    callback(null, "(result pending)");
-};
+var rmsg;
 
 websocket.listen(9999, "localhost", function(conn) {
     conn.id = Math.random().toString().substr(2);
@@ -37,7 +29,13 @@ websocket.listen(9999, "localhost", function(conn) {
 
     conn.on("data", function(opcode, data) {
         console.log("\t" + conn.id + ":\t" + data);
+        try{
+        client.write(data+'\n'); // send to maya
+      } catch(err) {
+        console.log(err);
+      }
     });
+
     conn.on("close", function(code, reason) {
         console.log("closed: " + conn.id, code, reason);
 
@@ -46,6 +44,23 @@ websocket.listen(9999, "localhost", function(conn) {
     });
 });
 
-repl.start({
-    "eval" : remoteMultiEval
+
+///// maya
+
+
+var net = require('net');
+
+var client = new net.Socket();
+
+client.connect(4000, '127.0.0.1', function() {
+	console.log('Connected');
+});
+
+client.on('data', function(data) {
+	console.log('Received: ' + data);
+	// client.destroy(); // kill client after server's response
+});
+
+client.on('close', function() {
+	console.log('Connection closed');
 });

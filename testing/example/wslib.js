@@ -2,7 +2,7 @@ function WsLib(url, port) {
   var ws = new WebSocket("ws://"+url+":"+port+"/repl");
   var rtg = 0;
   ws.onopen = function () {
-    ws.send('ping'); // Send the message 'Ping' to the server
+    // ws.send('ping'); // Send the message 'Ping' to the server
     rtg = 1;
   };
 

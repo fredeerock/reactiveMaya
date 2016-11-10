@@ -15,7 +15,7 @@ A helpful  workflow for getting p5.js (JavaScript) or Processing (Java) and Maya
 ### To integrate into your own code:
 1. Include the socklib.js in your web folder
 2. Place `<script src="socklib.js"></script>` in your html file.
-3. Inside your the setup function include something like the following:
+3. Inside your the setup function include something like...
 ```
   sl = new SockLib("127.0.0.1", 9999);
   sl.sendmsg("sphere -n \"new_sphere\";");

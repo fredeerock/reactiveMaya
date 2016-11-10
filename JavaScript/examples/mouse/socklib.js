@@ -29,11 +29,11 @@ function SockLib(url, port) {
     } else {
       console.log("had to wait");
       setTimeout(function() { // There's a better way to do this...
-      try {
-        ws.send(tmsg);
-      } catch (err) {
-        console.log(err);
-      }
+        try {
+          ws.send(tmsg);
+        } catch (err) {
+          console.log(err);
+        }
     }, 50);
     }
   };

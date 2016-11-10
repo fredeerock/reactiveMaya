@@ -26,7 +26,6 @@ commandPort -n "localhost:4000";
   ```
 
 ### Java Example:
-Processing code for simple mouse tracking from http://forum.processing.org/one/topic/processing-to-maya.html:
 ```
 import processing.net.*;
 
@@ -49,5 +48,13 @@ void mouseMoved (){
 }
 ```
 ## Javascript
-1. Install Node.js from <https://nodejs.org>
-2. 
+1. Download and Install Node.js from <https://nodejs.org>
+1. 2. In Maya enter the following in the MEL command bar at the bottom of the screen:
+```
+commandPort -n "localhost:4000";
+```
+1. Download this repo
+1. Open Terminal and `cd` into the JavaScript directory
+1. Then enter `node wsserver/ws.js`
+1. In the same folder enter `python -m SimpleHTTPServer`
+1. Open a browser and click on either the "mouse" or "colorTracking" example

@@ -49,3 +49,5 @@ void mouseMoved (){
 }
 ```
 ## Javascript
+1. Install Node.js from <https://nodejs.org>
+2. 

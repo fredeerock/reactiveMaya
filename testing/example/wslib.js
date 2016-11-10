@@ -36,8 +36,12 @@ function WsLib(url, port) {
     } else {
       console.log("had to wait");
       setTimeout(function() {
+      try {
         ws.send(tmsg);
-      }, 500);
+      } catch (err) {
+        console.log(err);
+      }
+    }, 50);
     }
   };
 

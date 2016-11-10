@@ -39,7 +39,7 @@ websocket.listen(9999, "localhost", function(conn) {
         console.log("\t" + conn.id + ":\t" + data);
     });
     conn.on("close", function(code, reason) {
-        console.log("closed: " + conn.id, code, reason)
+        console.log("closed: " + conn.id, code, reason);
 
         // remove connection
         delete connections[conn.id];

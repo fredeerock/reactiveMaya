@@ -1,5 +1,5 @@
 # reactiveMaya
-A helpful  workflow for getting p5.js (JavaScript) or Processing (Java) and Maya talking to each other.
+A helpful  workflow for getting p5.js (JavaScript) or Processing (Java) and Maya (or any other local socket compatible program) talking to each other.
 
 ## Javascript
 
@@ -24,7 +24,7 @@ A helpful  workflow for getting p5.js (JavaScript) or Processing (Java) and Maya
 ```
   sl.sendmsg("move -a -os -wd "+x+" "+y+" 0 \"new_sphere\";");
 ```
-5. You need both files inside the wsserver folder. Run them using `node wsserver/ws.js`.
+5. You need both files inside the "wsserver" folder. Run them using `node wsserver/ws.js`.
 
 ## Java
 

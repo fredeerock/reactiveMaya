@@ -7,7 +7,7 @@ var connections = Object.create(null); // to keep track of who's connecting
 websocket.listen(9999, "localhost", function(conn) {
   conn.id = Math.random().toString().substr(2); //generate random id for user
   connections[conn.id] = conn;
-  console.log("new connection: " + conn.id);
+  console.log("New WS connection: " + conn.id);
 
   conn.on("data", function(opcode, data) {
     console.log("\t" + conn.id + ":\t" + data);
@@ -21,7 +21,7 @@ websocket.listen(9999, "localhost", function(conn) {
   });
 
   conn.on("close", function(code, reason) {
-    console.log("closed: " + conn.id, code, reason);
+    console.log("WS connection closed: " + conn.id, code, reason);
     delete connections[conn.id];
   });
 });

@@ -1,20 +1,13 @@
-function WsLib(url, port) {
+function SockLib(url, port) {
   var ws = new WebSocket("ws://"+url+":"+port+"/repl");
   var rtg = 0;
   ws.onopen = function () {
-    // ws.send('ping'); // Send the message 'Ping' to the server
+    // ws.send('ping'); // Send the message 'ping' to the server
     rtg = 1;
   };
 
   ws.onmessage = function(e) {
     console.log(e.data);
-      // console.log("command: ", e.data);
-      // try {
-      //     var result = eval(e.data);
-      //     ws.send(result.toString());
-      // } catch (err) {
-      //     ws.send(err.toString());
-      // }
   };
 
   ws.onerror = function (error) {
@@ -35,7 +28,7 @@ function WsLib(url, port) {
 
     } else {
       console.log("had to wait");
-      setTimeout(function() {
+      setTimeout(function() { // There's a better way to do this...
       try {
         ws.send(tmsg);
       } catch (err) {

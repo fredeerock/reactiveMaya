@@ -32,9 +32,23 @@ var net = require('net');
 
 var client = new net.Socket();
 
-client.connect(4000, '127.0.0.1', function() {
-	console.log('Connected to local socket');
-});
+// trytoconnect();
+// function trytoconnect() {
+  client.connect(4000, '127.0.0.1', function() {
+  	console.log('Connected to local socket');
+  })
+  .on('error',function(){
+
+    console.log("No local server is running. \n\nIf you're using Maya you need to start that up fist and input the following into the MEL box: commandPort -n \"localhost:4000\";");
+    process.exit(1);
+
+    // setTimeout(function() {
+
+      // trytoconnect();
+    // }, 5000);
+  })
+  // .end();
+// }
 
 client.on('data', function(data) {
 	console.log('Received from local socket: ' + data);

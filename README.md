@@ -2,6 +2,8 @@
 A helpful  workflow for getting p5.js (JavaScript) or Processing (Java) and Maya talking to each other.
 
 ## Javascript
+
+### To use the JS examples:
 1. Download and Install Node.js from <https://nodejs.org>
 1. In Maya enter the following in the MEL command bar at the bottom of the screen: `commandPort -n "localhost:4000";`
 1. Download this repo
@@ -9,6 +11,20 @@ A helpful  workflow for getting p5.js (JavaScript) or Processing (Java) and Maya
 1. Then enter `node wsserver/ws.js`
 1. In the same folder enter `python -m SimpleHTTPServer`
 1. Open a browser and click on either the "mouse" or "colorTracking" example
+
+### To integrate into your own code:
+1. Include the socklib.js in your web folder
+2. Place `<script src="socklib.js"></script>` in your html file.
+3. Inside your the setup function include something like the following:
+```
+  sl = new SockLib("127.0.0.1", 9999);
+  sl.sendmsg("sphere -n \"new_sphere\";");
+```
+4. Inside your draw function you can use something like...
+```
+  sl.sendmsg("move -a -os -wd "+x+" "+y+" 0 \"new_sphere\";");
+```
+5. You need both files inside the wsserver folder. Run them using `node wsserver/ws.js`.
 
 ## Java
 

@@ -1,3 +1,6 @@
+// This bridges WebSocket communication with local sockets.
+// To use, downlodad node.js. Open terminal and, node ws.js.
+
 var websocket = require("./wsserver");
 var connections = Object.create(null); // to keep track of who's connecting
 
@@ -10,7 +13,7 @@ websocket.listen(9999, "localhost", function(conn) {
     console.log("\t" + conn.id + ":\t" + data);
 
     try{
-      client.write(data+'\n'); // send to normal socket
+      client.write(data+'\n'); // send to local socket
     } catch(err) {
       console.log(err);
     }
@@ -24,7 +27,7 @@ websocket.listen(9999, "localhost", function(conn) {
 });
 
 
-// Setup normal socket
+// Setup local socket
 var net = require('net');
 
 var client = new net.Socket();

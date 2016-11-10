@@ -49,10 +49,7 @@ void mouseMoved (){
 ```
 ## Javascript
 1. Download and Install Node.js from <https://nodejs.org>
-1. 2. In Maya enter the following in the MEL command bar at the bottom of the screen:
-```
-commandPort -n "localhost:4000";
-```
+1. In Maya enter the following in the MEL command bar at the bottom of the screen: `commandPort -n "localhost:4000";`
 1. Download this repo
 1. Open Terminal and `cd` into the JavaScript directory
 1. Then enter `node wsserver/ws.js`

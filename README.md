@@ -9,8 +9,8 @@ A helpful  workflow for getting p5.js (JavaScript) or Processing (Java) and Maya
 1. Download this repo
 1. Open Terminal and `cd` into the JavaScript directory
 1. Then enter `node wsserver/ws.js`
-1. In the same folder enter `python -m SimpleHTTPServer`
-1. Open a browser and click on either the "mouse" or "colorTracking" example
+1. Open a new Terminal and `cd` into the same folder and enter `python -m SimpleHTTPServer`
+1. Open a browser to 127.0.0.1:8000 and click on either the "mouse" or "colorTracking" example
 
 ### To integrate into your own code:
 1. Include the socklib.js in your web folder

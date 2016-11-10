@@ -33,14 +33,14 @@ var net = require('net');
 var client = new net.Socket();
 
 client.connect(4000, '127.0.0.1', function() {
-	console.log('Connected to normal socket');
+	console.log('Connected to local socket');
 });
 
 client.on('data', function(data) {
-	console.log('Received from normal socket: ' + data);
+	console.log('Received from local socket: ' + data);
 	// client.destroy(); // kill client after server's response
 });
 
 client.on('close', function() {
-	console.log('Connection to normal socket closed');
+	console.log('Connection to local socket closed');
 });

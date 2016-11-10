@@ -1,5 +1,14 @@
 # reactiveMaya
-A helpful little procedure for getting Processing and Maya talking to each other. Java and JavaScript instructions below.
+A helpful  workflow for getting p5.js (JavaScript) or Processing (Java) and Maya talking to each other.
+
+## Javascript
+1. Download and Install Node.js from <https://nodejs.org>
+1. In Maya enter the following in the MEL command bar at the bottom of the screen: `commandPort -n "localhost:4000";`
+1. Download this repo
+1. Open Terminal and `cd` into the JavaScript directory
+1. Then enter `node wsserver/ws.js`
+1. In the same folder enter `python -m SimpleHTTPServer`
+1. Open a browser and click on either the "mouse" or "colorTracking" example
 
 ## Java
 
@@ -47,11 +56,3 @@ void mouseMoved (){
   println(x+" "+y);
 }
 ```
-## Javascript
-1. Download and Install Node.js from <https://nodejs.org>
-1. In Maya enter the following in the MEL command bar at the bottom of the screen: `commandPort -n "localhost:4000";`
-1. Download this repo
-1. Open Terminal and `cd` into the JavaScript directory
-1. Then enter `node wsserver/ws.js`
-1. In the same folder enter `python -m SimpleHTTPServer`
-1. Open a browser and click on either the "mouse" or "colorTracking" example
